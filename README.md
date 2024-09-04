@@ -13,6 +13,7 @@ The primary purpose of ChromeTS Launchpad is to streamline the process of develo
 2. Leverage TypeScript for improved code quality and developer experience
 3. Incorporate best practices and modern tooling for extension development
 
+
 ## What This Extension Does
 
 This boilerplate extension includes basic functionality to demonstrate core Chrome extension features:
@@ -23,7 +24,17 @@ This boilerplate extension includes basic functionality to demonstrate core Chro
 4. An options page for extension configuration
 5. Integration with Chrome's Storage API for saving settings
 
-Developers can easily build upon this foundation to create more complex and feature-rich extensions.
+
+![Screeshot](public/demo.png)
+
+*Developers can easily build upon this foundation to create more complex and feature-rich extensions.*
+
+
+## Why TypeScript
+
+TypeScript is a modern, statically typed programming language that provides type safety and improved developer experience. It is used in this boilerplate extension. 
+
+
 
 ## Why Manifest V3
 
