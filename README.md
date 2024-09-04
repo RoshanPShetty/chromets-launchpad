@@ -1,7 +1,6 @@
 # ChromeTS Launchpad ![Logo](public/icons/icon48.png)
 
-![Version](https://img.shields.io/github/v/release/yourusername/ChromeTS-Launchpad)
-![License](https://img.shields.io/github/license/yourusername/ChromeTS-Launchpad)
+![License](https://img.shields.io/github/license/roshanpshetty/ChromeTS-Launchpad)
 
 
 ChromeTS Launchpad is a modern, TypeScript-based boilerplate for creating Chrome Extensions. It provides a solid foundation for building extensions with type safety and modern JavaScript features.
