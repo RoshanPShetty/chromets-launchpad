@@ -1,3 +1,2 @@
-chrome.runtime.onInstalled.addListener(() => {
-	console.log("Extension installed");
-});
+console.log("Content script loaded");
+// Add any content script specific code here
