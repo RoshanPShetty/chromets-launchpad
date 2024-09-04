@@ -1,0 +1,25 @@
+{
+	"manifest_version": 3,
+	"name": "ChromeTS LaunchPad",
+	"version": "1.0.0",
+	"description": "A Chrome Extension boilerplate with TypeScript",
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"]
+		}
+	],
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"options_page": "options.html",
+	"permissions": ["storage"]
+}
