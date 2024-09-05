@@ -116,6 +116,11 @@ This will generate optimized files in the `dist` folder.
 - Update the HTML and CSS files in the `popup` and `options` folders to customize the user interface
 - Adjust the `manifest.json` file to change extension metadata, permissions, and other settings
 
+# Future Implementations
+
+- ESLint for linting and code style
+- MV3 Boilerplate w/ React/Vue/Solid/Svelte/Preact Templates
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
