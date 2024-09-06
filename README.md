@@ -117,7 +117,27 @@ This will generate optimized files in the `dist` folder.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome and greatly appreciated! If you're looking to contribute, here are some good first issues to get you started:
+
+### Good First Issues
+
+1. **Add ESLint to improve code quality and consistency**
+   - Integrate ESLint into the project to enforce coding standards and catch potential errors early in the development process.
+   - [View Issue](https://github.com/RoshanPShetty/ChromeTS-Launchpad/issues/[ISSUE_NUMBER])
+
+2. **Add Jest for unit testing TypeScript code**
+   - Set up Jest testing framework to enable unit testing for TypeScript code in the project.
+   - [View Issue](https://github.com/RoshanPShetty/ChromeTS-Launchpad/issues/[ISSUE_NUMBER])
+
+To contribute:
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+For more detailed information on contributing, please see our [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## License
 
