@@ -72,7 +72,7 @@ By using Manifest V3, ChromeTS Launchpad ensures that extensions built with it a
 
 2. Navigate to the project directory:
    ```bash
-   cd ChromeTS-Launchpad
+   cd chromets-launchpad
    ```
 
 3. Install dependencies:
@@ -96,6 +96,31 @@ npm run build
 
 This will generate optimized files in the `dist` folder.
 
+### ESLint Configuration
+
+The project is configured with ESLint to enforce consistent code quality and catch potential errors early. The following key linting rules are in place:
+
+- **Enforce strict equality** (`eqeqeq`): Requires the use of `===` and `!==` instead of `==` and `!=` to avoid type coercion issues.
+- **Use semicolons** (`semi`): Enforces the use of semicolons at the end of statements.
+- **Warn on unused variables** (`@typescript-eslint/no-unused-vars`): Flags variables that are declared but not used anywhere in the code.
+- **Prefer `const`** (`prefer-const`): Suggests using `const` for variables that are never reassigned after being initialized.
+- **Limit `console` usage** (`no-console`): Gives a warning whenever `console.log` or similar methods are used.
+
+To lint your code, run:
+
+```bash
+npm run lint
+```
+
+To automatically fix certain linting issues, run:
+
+```bash
+npm run lint:fix
+```
+
+Ensure that your code passes the linting checks before committing to maintain code consistency and quality across the project.
+
+
 ### Loading the Extension in Chrome
 
 1. Open Chrome and navigate to `chrome://extensions`
@@ -112,7 +137,6 @@ This will generate optimized files in the `dist` folder.
 
 ## Future Implementations
 
-- ESLint for linting and code style
 - MV3 Boilerplate w/ React/Vue/Solid/Svelte/Preact Templates
 
 ## Contributing
@@ -121,11 +145,7 @@ Contributions are welcome and greatly appreciated! If you're looking to contribu
 
 ### Good First Issues
 
-1. **Add ESLint to improve code quality and consistency**
-   - Integrate ESLint into the project to enforce coding standards and catch potential errors early in the development process.
-   - [View Issue](https://github.com/RoshanPShetty/ChromeTS-Launchpad/issues/[ISSUE_NUMBER])
-
-2. **Add Jest for unit testing TypeScript code**
+1. **Add Jest for unit testing TypeScript code**
    - Set up Jest testing framework to enable unit testing for TypeScript code in the project.
    - [View Issue](https://github.com/RoshanPShetty/ChromeTS-Launchpad/issues/[ISSUE_NUMBER])
 
