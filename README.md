@@ -104,7 +104,6 @@ The project is configured with ESLint to enforce consistent code quality and cat
 - **Use semicolons** (`semi`): Enforces the use of semicolons at the end of statements.
 - **Warn on unused variables** (`@typescript-eslint/no-unused-vars`): Flags variables that are declared but not used anywhere in the code.
 - **Prefer `const`** (`prefer-const`): Suggests using `const` for variables that are never reassigned after being initialized.
-- **Limit `console` usage** (`no-console`): Gives a warning whenever `console.log` or similar methods are used.
 
 To lint your code, run:
 

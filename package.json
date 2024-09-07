@@ -4,9 +4,9 @@
 	"description": "A Chrome Extension boilerplate with TypeScript",
 	"type": "module",
 	"scripts": {
-		"build": "npm run lint && webpack --config webpack.config.js --mode=production",
-		"build:dev": "npm run lint && webpack --config webpack.config.js --mode=development",
-		"watch": "webpack --config webpack.config.js --mode=development --watch",
+		"build": "npm run lint && webpack --config webpack.config.cjs --mode=production",
+		"build:dev": "npm run lint && webpack --config webpack.config.cjs --mode=development",
+		"watch": "webpack --config webpack.config.cjs --mode=development --watch",
 		"lint": "eslint .",
         "lint:fix": "eslint . --fix"
 	},
