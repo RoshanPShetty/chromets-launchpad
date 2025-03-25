@@ -1,0 +1,38 @@
+{
+  "name": "chrome-extension-react-tailwind-template",
+  "version": "1.0.0",
+  "description": "Chrome Extension Template with React and Tailwind CSS",
+  "scripts": {
+    "build": "webpack --config webpack.config.cjs",
+    "watch": "webpack --config webpack.config.cjs --watch",
+    "dev": "webpack --config webpack.config.cjs --mode development",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\""
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.260",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "autoprefixer": "^10.4.14",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.32.2",
+    "postcss": "^8.4.24",
+    "postcss-loader": "^7.3.3",
+    "prettier": "^2.8.8",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.2",
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  }
+} 
