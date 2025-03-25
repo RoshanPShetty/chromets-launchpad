@@ -1,162 +1,100 @@
-# ChromeTS Launchpad ![Logo](public/icons/icon48.png)
+# Chrome Extension Templates
 
-![License](https://img.shields.io/github/license/roshanpshetty/ChromeTS-Launchpad)
+A collection of boilerplate templates for creating Chrome extensions with different tech stacks.
 
+## Available Templates
 
-ChromeTS Launchpad is a modern, TypeScript-based boilerplate for creating Chrome Extensions. It provides a solid foundation for building extensions with type safety, modern JavaScript features, and sleek styling using Tailwind CSS.
-
-## Purpose
-
-The primary purpose of ChromeTS Launchpad is to streamline the process of developing Chrome extensions using TypeScript. It aims to:
-
-1. Provide a well-structured starting point for Chrome extension development
-2. Leverage TypeScript for improved code quality and developer experience
-3. Incorporate best practices and modern tooling for extension development
-4. Offer easy and flexible styling with Tailwind CSS
-
-## What This Extension Does
-
-This boilerplate extension includes basic functionality to demonstrate core Chrome extension features:
-
-1. A background script that logs when the extension is installed
-2. A content script that can interact with web pages
-3. A popup with a simple button interaction
-4. An options page for extension configuration
-5. Integration with Chrome's Storage API for saving settings
-6. Tailwind CSS for quick and responsive styling
-
-![Screeshot](public/demo.png)
-
-*Developers can easily build upon this foundation to create more complex and feature-rich extensions.*
-
-## Why TypeScript
-
-TypeScript is a modern, statically typed programming language that provides type safety and improved developer experience. It is used in this boilerplate extension to enhance code quality and maintainability.
-
-## Why Manifest V3
-
-ChromeTS Launchpad uses Manifest V3, the latest version of Chrome's extension platform. Here's why:
-
-1. **Enhanced Security**: Manifest V3 improves extension security through more granular permissions and limited access to powerful APIs.
-2. **Better Performance**: It promotes the use of service workers for background processes, leading to reduced memory usage and improved overall browser performance.
-3. **Future-Proofing**: As the new standard for Chrome extensions, Manifest V3 ensures long-term compatibility and support.
-4. **Improved User Privacy**: It provides users with more control over when and how extensions can access site data.
-5. **Modern Web Technologies**: Manifest V3 aligns more closely with current web development practices and standards.
-
-By using Manifest V3, ChromeTS Launchpad ensures that extensions built with it are up-to-date, secure, and performant.
-
-## Features
-
-- TypeScript support
-- Webpack for bundling
+### React + Tailwind CSS
+A modern template using React 18 with TypeScript and Tailwind CSS for styling.
+- React 18 with TypeScript support
 - Tailwind CSS for styling
-- Background script
-- Content script
-- Popup page
-- Options page
-- Chrome Storage API integration
+- Webpack configuration
+- ESLint and Prettier setup
+- Popup, background, and content script examples
+
+### TypeScript + Tailwind CSS
+A lightweight template using TypeScript and Tailwind CSS.
+- TypeScript support
+- Tailwind CSS for styling
+- Webpack configuration
+- ESLint and Prettier setup
+- Popup, background, and content script examples
 
 ## Getting Started
 
-### Prerequisites
+1. Choose a template from the `templates` directory:
+   - `react-tailwind/` for React + Tailwind CSS
+   - `typescript-tailwind/` for TypeScript + Tailwind CSS
 
-- Node.js (v14 or later)
-- npm (v6 or later)
-
-### Installation
-
-1. Clone the repository:
+2. Copy the template to your new project:
    ```bash
-   git clone https://github.com/RoshanPShetty/ChromeTS-Launchpad.git
+   cp -r templates/react-tailwind your-extension-name
+   # or
+   cp -r templates/typescript-tailwind your-extension-name
    ```
 
-2. Navigate to the project directory:
+3. Navigate to your project directory:
    ```bash
-   cd chromets-launchpad
+   cd your-extension-name
    ```
 
-3. Install dependencies:
+4. Install dependencies:
    ```bash
    npm install
    ```
 
-### Development
+5. Start development:
+   ```bash
+   npm run dev
+   ```
 
-Run the development build with hot reloading:
-```bash
-npm run watch
+6. Build for production:
+   ```bash
+   npm run build
+   ```
+
+7. Load the extension in Chrome:
+   - Open Chrome and go to `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked"
+   - Select the `dist` directory
+
+## Project Structure
+
+Each template follows a similar structure:
+```
+├── public/              # Static files
+│   ├── manifest.json   # Chrome extension manifest
+│   ├── popup.html      # Popup HTML file
+│   └── icons/          # Extension icons
+├── src/                # Source files
+│   ├── popup.ts(x)     # Popup script/component
+│   ├── background.ts   # Background script
+│   ├── content.ts(x)   # Content script/component
+│   └── index.css       # Global styles
+├── package.json        # Dependencies and scripts
+├── webpack.config.cjs  # Webpack configuration
+├── tsconfig.json      # TypeScript configuration
+├── tailwind.config.js # Tailwind CSS configuration
+└── postcss.config.cjs # PostCSS configuration
 ```
 
-### Production Build
+## Development
 
-To create a production build:
-```bash
-npm run build
-```
-
-This will generate optimized files in the `dist` folder.
-
-### ESLint Configuration
-
-The project is configured with ESLint to enforce consistent code quality and catch potential errors early. The following key linting rules are in place:
-
-- **Enforce strict equality** (`eqeqeq`): Requires the use of `===` and `!==` instead of `==` and `!=` to avoid type coercion issues.
-- **Use semicolons** (`semi`): Enforces the use of semicolons at the end of statements.
-- **Warn on unused variables** (`@typescript-eslint/no-unused-vars`): Flags variables that are declared but not used anywhere in the code.
-- **Prefer `const`** (`prefer-const`): Suggests using `const` for variables that are never reassigned after being initialized.
-
-To lint your code, run:
-
-```bash
-npm run lint
-```
-
-To automatically fix certain linting issues, run:
-
-```bash
-npm run lint:fix
-```
-
-Ensure that your code passes the linting checks before committing to maintain code consistency and quality across the project.
-
-
-### Loading the Extension in Chrome
-
-1. Open Chrome and navigate to `chrome://extensions`
-2. Enable "Developer mode"
-3. Click "Load unpacked" and select the `dist` folder in your project directory
-
-## Customization
-
-- Modify the TypeScript files in the `src` folder to add your extension's functionality
-- Update the HTML files in the `popup` and `options` folders
-- Utilize Tailwind CSS classes to style your HTML elements
-- Adjust the `tailwind.config.js` file to customize your Tailwind setup
-- Modify the `manifest.json` file to change extension metadata, permissions, and other settings
-
-## Future Implementations
-
-- MV3 Boilerplate w/ React/Vue/Solid/Svelte/Preact Templates
+Each template includes the following npm scripts:
+- `npm run dev`: Start development mode with hot reloading
+- `npm run build`: Build for production
+- `npm run watch`: Watch for changes and rebuild
+- `npm run lint`: Run ESLint
+- `npm run format`: Format code with Prettier
 
 ## Contributing
 
-Contributions are welcome and greatly appreciated! If you're looking to contribute, here are some good first issues to get you started:
-
-### Good First Issues
-
-1. **Add Jest for unit testing TypeScript code**
-   - Set up Jest testing framework to enable unit testing for TypeScript code in the project.
-   - [View Issue](https://github.com/RoshanPShetty/ChromeTS-Launchpad/issues/[ISSUE_NUMBER])
-
-To contribute:
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-For more detailed information on contributing, please see our [CONTRIBUTING.md](CONTRIBUTING.md) file.
+Feel free to:
+1. Submit issues and enhancement requests
+2. Create new templates for different tech stacks
+3. Improve existing templates
+4. Add new features to templates
 
 ## License
 
